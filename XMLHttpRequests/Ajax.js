@@ -12,7 +12,7 @@ let containerUsers = document.getElementsByClassName("names_users")[0]; // Acced
     xhr.addEventListener("readystatechange", (e) => {
         if (xhr.readyState !== 4) return;
 
-        if (xhr.status === 200) {
+        if (xhr.status >= 200 && xhr.status <= 400) {
             text.innerText = "Respuesta Satisfactoriamente Aceptada";
             text.style.color = "green";
         } else {
